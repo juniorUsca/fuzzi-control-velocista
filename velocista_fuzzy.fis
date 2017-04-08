@@ -1,0 +1,111 @@
+[System]
+Name='velocista_fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=8
+NumOutputs=1
+NumRules=11
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='D0'
+Range=[0 5]
+NumMFs=4
+MF1='lejos':'trapmf',[0 0 3 3.6]
+MF2='borde':'trimf',[3 3.6 4.3]
+MF3='dentro':'trapmf',[4.3 4.85 5 5]
+MF4='medio':'trimf',[3.6 4.3 4.85]
+
+[Input2]
+Name='D1'
+Range=[0 5]
+NumMFs=4
+MF1='lejos':'trapmf',[0 0 3 3.6]
+MF2='borde':'trimf',[3 3.6 4.3]
+MF3='dentro':'trapmf',[4.3 4.85 5 5]
+MF4='medio':'trimf',[3.6 4.3 4.85]
+
+[Input3]
+Name='D2'
+Range=[0 5]
+NumMFs=4
+MF1='lejos':'trapmf',[0 0 3 3.6]
+MF2='borde':'trimf',[3 3.6 4.3]
+MF3='dentro':'trapmf',[4.3 4.85 5 5]
+MF4='medio':'trimf',[3.6 4.3 4.85]
+
+[Input4]
+Name='D3'
+Range=[0 5]
+NumMFs=4
+MF1='lejos':'trapmf',[0 0 3 3.6]
+MF2='borde':'trimf',[3 3.6 4.3]
+MF3='dentro':'trapmf',[4.3 4.85 5 5]
+MF4='medio':'trimf',[3.6 4.3 4.85]
+
+[Input5]
+Name='D4'
+Range=[0 5]
+NumMFs=4
+MF1='lejos':'trapmf',[0 0 3 3.6]
+MF2='borde':'trimf',[3 3.6 4.3]
+MF3='dentro':'trapmf',[4.3 4.85 5 5]
+MF4='medio':'trimf',[3.6 4.3 4.85]
+
+[Input6]
+Name='D5'
+Range=[0 5]
+NumMFs=4
+MF1='lejos':'trapmf',[0 0 3 3.6]
+MF2='borde':'trimf',[3 3.6 4.3]
+MF3='dentro':'trapmf',[4.3 4.85 5 5]
+MF4='medio':'trimf',[3.6 4.3 4.85]
+
+[Input7]
+Name='D6'
+Range=[0 5]
+NumMFs=4
+MF1='lejos':'trapmf',[0 0 3 3.6]
+MF2='borde':'trimf',[3 3.6 4.3]
+MF3='dentro':'trapmf',[4.3 4.85 5 5]
+MF4='medio':'trimf',[3.6 4.3 4.85]
+
+[Input8]
+Name='D7'
+Range=[0 5]
+NumMFs=4
+MF1='lejos':'trapmf',[0 0 3 3.6]
+MF2='borde':'trimf',[3 3.6 4.3]
+MF3='dentro':'trapmf',[4.3 4.85 5 5]
+MF4='medio':'trimf',[3.6 4.3 4.85]
+
+[Output1]
+Name='angulo'
+Range=[-90 90]
+NumMFs=9
+MF1='defrente':'trimf',[-15 0 15]
+MF2='ligero_izq':'trimf',[-30 -15 0]
+MF3='ligero_der':'trimf',[0 15 30]
+MF4='izquierda':'trimf',[-45 -30 -15]
+MF5='derecha':'trimf',[15 30 45]
+MF6='medio_izq':'trimf',[-60 -45 -30]
+MF7='medio_der':'trimf',[30 45 60]
+MF8='fuerte_izq':'trapmf',[-90 -90 -60 -45]
+MF9='fuerte_der':'trapmf',[45 60 90 90]
+
+[Rules]
+1 1 1 3 3 1 1 1, 1 (1) : 1
+1 1 1 -1 3 1 1 1, 2 (1) : 1
+1 1 1 3 -1 1 1 1, 3 (1) : 1
+1 1 1 -1 1 1 1 1, 2 (1) : 1
+1 1 1 1 -1 1 1 1, 3 (1) : 1
+1 -1 -1 1 1 1 1 1, 6 (1) : 1
+1 1 1 1 1 -1 -1 1, 7 (1) : 1
+-1 -1 1 1 1 1 1 1, 8 (1) : 1
+1 1 1 1 1 1 -1 -1, 9 (1) : 1
+1 1 -1 -1 1 1 1 1, 4 (1) : 1
+1 1 1 1 -1 -1 1 1, 5 (1) : 1
